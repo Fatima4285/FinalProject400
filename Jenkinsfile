@@ -1,6 +1,11 @@
 // This jenkinsfile is used to run CI/CD on my local (Windows) box, no VM's needed.
 pipeline {
   agent any
+  tools {
+    jdk 'Java 17'
+    gradle 'Gradle 7.6'
+  }
+  
    environment {
         // This is set so that the Python API tests will recognize it
         // and go through the Zap proxy waiting at 9888
