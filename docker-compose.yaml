@@ -1,6 +1,6 @@
 services:
   jenkins:
-    build: ./jenkins
+    build: .
     privileged: true
     user: root
     ports:
