@@ -5,7 +5,7 @@ pipeline {
     jdk 'Java 17'
     gradle 'Gradle 7.6'
   }
-  
+
    environment {
         // This is set so that the Python API tests will recognize it
         // and go through the Zap proxy waiting at 9888
@@ -26,7 +26,7 @@ pipeline {
         PATH = "${JAVA_HOME}/bin:${PATH}"
       }
       steps {
-        sh 'docker build -t fatima4285/ensf400project1 .'
+        sh 'docker build -t ensf400project1 .'
       }
     }
     // run all the unit tests - these do not require anything else
