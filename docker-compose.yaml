@@ -1,19 +1,19 @@
 services:
-  # jenkins:
-  #   build: ./jenkins
-  #   privileged: true
-  #   user: root
-  #   ports:
-  #   - 8080:8080
-  #   - 50000:50000
-  #   container_name: jenkins
-  #   volumes:
-  #   - /home/codespace:/var/jenkins_home
-  #   - /var/run/docker.sock:/var/run/docker.sock
-  #   networks:
-  #     - dev-network
-  #   depends_on:
-  #     - sonarqube
+  jenkins:
+    build: ./jenkins
+    privileged: true
+    user: root
+    ports:
+    - 8080:8080
+    - 50000:50000
+    container_name: jenkins
+    volumes:
+    - /home/codespace:/var/jenkins_home
+    - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - dev-network
+    depends_on:
+      - sonarqube
 
   sonarqube:
     image: sonarqube:8.9-community

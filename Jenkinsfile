@@ -18,6 +18,11 @@ pipeline {
 
   stages {
 
+    stage('Docker Access Test') {
+    steps {
+      sh 'docker ps'
+      }
+    }
     // build the war file (the binary).  This is the only
     // place that happens.
     stage('Build') {
