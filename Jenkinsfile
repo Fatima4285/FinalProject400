@@ -27,7 +27,7 @@ pipeline {
         PATH = "${JAVA_HOME}/bin:${PATH}"
       }
       steps {
-        sh 'docker build -t ensf400project1 .'
+        sh 'docker build -t Fatima4285/ensf400project1 .'
       }
     }
     // run all the unit tests - these do not require anything else
