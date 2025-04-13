@@ -25,5 +25,9 @@ RUN mkdir -p ${GRADLE_HOME} && \
 # Add Gradle to PATH
 ENV PATH="${GRADLE_HOME}/gradle-${GRADLE_VERSION}/bin:${PATH}"
 
+RUN adduser jenkins docker || true
+USER jenkins
+
+
 # Verify installation
 RUN gradle -v
