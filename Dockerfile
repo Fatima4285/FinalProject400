@@ -31,5 +31,7 @@ ENV PATH="${GRADLE_HOME}/gradle-${GRADLE_VERSION}/bin:${PATH}"
 RUN gradle -v
 
 USER root
-RUN addgroup -g 107 docker || true && adduser jenkins docker || true
+RUN groupadd -g 107 docker && \
+    useradd -m jenkins && \
+    usermod -aG docker jenkins
 USER jenkins
