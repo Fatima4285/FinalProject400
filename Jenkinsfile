@@ -89,6 +89,7 @@ pipeline {
     stage('Static Analysis') {
       environment {
           // Override JAVA_HOME to use JDK 11 for this stage
+          // test commit
           JAVA_HOME = '/opt/java/11.0.14'
           PATH = "${JAVA_HOME}/bin:${PATH}"
         }      
