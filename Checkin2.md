@@ -45,3 +45,7 @@ Triggering automated checks upon pull request to the main branch
 
 SonarQube code static analysis and Unit Tests pass in pipeline
 ![](./Screenshots/sonarQube.png)
+
+
+Generated Report
+![](./Screenshots/report.png)
