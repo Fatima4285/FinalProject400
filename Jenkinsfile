@@ -94,7 +94,7 @@ pipeline {
         }      
 
       steps{
-        sh './gradlew sonarqube -Dsonar.host.url=http://localhost:9000 -Dsonar.login=admin -Dsonar.password=admin'
+        sh './gradlew sonarqube -Dsonar.host.url=http://localhost:9000 -Dsonar.login=admin -Dsonar.password=ensf400'
           }
     }
   }
