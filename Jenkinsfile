@@ -95,7 +95,7 @@ pipeline {
         }      
 
       steps{
-        sh './gradlew sonarqube -Dsonar.host.url=https://literate-space-broccoli-g4qj597r7wx52x4p-9000.app.github.dev/projects -Dsonar.login=admin -Dsonar.password=ensf400'
+        sh './gradlew sonarqube -Dsonar.host.url=https://literate-space-broccoli-g4qj597r7wx52x4p-9000.app.github.dev -Dsonar.login=admin -Dsonar.password=ensf400'
           }
     }
   }
