@@ -1,8 +1,5 @@
 FROM jenkins/jenkins:alpine
-WORKDIR /desktop_app  
-COPY build.gradle ./ 
-COPY gradle ./gradle  
-COPY . . 
+
 
 # switch to root user
 USER root
@@ -34,13 +31,3 @@ ENV PATH="${GRADLE_HOME}/gradle-${GRADLE_VERSION}/bin:${PATH}"
 
 # Verify installation
 RUN gradle -v
-
-RUN chmod +x ./gradlew  
-
-
-
-USER root
-RUN groupadd -g 107 docker && \
-    useradd -m jenkins && \
-    usermod -aG docker jenkins
-USER jenkins
