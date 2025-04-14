@@ -1,12 +1,7 @@
 // This jenkinsfile is used to run CI/CD on my local (Windows) box, no VM's needed.
 //commit to trigger 1234566
 pipeline {
-  agent {
-    docker {
-      image 'docker:latest'
-      args '-v /var/run/docker.sock:/var/run/docker.sock'
-    }
-  }  
+  agent any 
   // tools {
   //   jdk 'Java 17'
   //   gradle 'Gradle 7.6'
