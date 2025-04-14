@@ -20,16 +20,16 @@ pipeline {
 
     // build the war file (the binary).  This is the only
     // place that happens.
-    stage('Build') {
-      environment {
-        // Override JAVA_HOME to use JDK 11 for this stage
-        JAVA_HOME = '/opt/java/11.0.14'
-        PATH = "${JAVA_HOME}/bin:${PATH}"
-      }
-      steps {
-        sh 'docker build -t Fatima4285/ensf400project1 .'
-      }
-    }
+    // stage('Build') {
+    //   environment {
+    //     // Override JAVA_HOME to use JDK 11 for this stage
+    //     JAVA_HOME = '/opt/java/11.0.14'
+    //     PATH = "${JAVA_HOME}/bin:${PATH}"
+    //   }
+    //   steps {
+    //     sh 'docker build -t Fatima4285/ensf400project1 .'
+    //   }
+    // }
     // run all the unit tests - these do not require anything else
     // to be running and most run very quickly.
     stage('Unit Tests') {
