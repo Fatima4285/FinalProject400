@@ -41,3 +41,7 @@ WebHook history showing Jenkins picked up the push commit:
 
 Triggering automated checks upon pull request to the main branch
 ![](./Screenshots/triggerAUto%20(1).png)
+
+
+SonarQube code static analysis and Unit Tests pass in pipeline
+![](./Screenshots/sonarQube.png)
